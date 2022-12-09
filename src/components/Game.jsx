@@ -52,7 +52,7 @@ class Game extends React.Component {
               'К началу игры';
           return (
               <li key={move}>
-                  <button onClick={() => this.jumpTo(move)}>{desc}</button>
+                  <button className='btn' onClick={() => this.jumpTo(move)}>{desc}</button>
               </li>
           );
         });
@@ -67,6 +67,7 @@ class Game extends React.Component {
 
         return (
             <div className="game">
+                <h1 style={{color: "#e8ae0e"}}>Игра в крестики-нолики</h1>
                 <div className="game-board">
                     <Board
                         squares={current.squares}
